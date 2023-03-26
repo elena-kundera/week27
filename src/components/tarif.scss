@@ -1,0 +1,65 @@
+$main-color: #ffff;
+$common-background: rgb(197, 197, 197);
+
+@mixin secondary-information {
+    background-color: $common-background;
+    color: rgb(35, 35, 35);
+    padding: 0.2%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tarifContainer {
+    text-align: center;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    
+    .tarif_titleContainer {
+        background-color: rgb(25, 106, 236);
+        color: $main-color;
+        padding: 0.3%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    
+    .tarifPrice {
+        background-color: rgb(92, 146, 234);
+        color: $main-color;
+        height: 150px;
+        padding: 0.3%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .tarifSpeed {
+    @include secondary-information;
+    }
+    
+    .tarifTraffic {
+        @include secondary-information;
+    }
+
+    .tarif_button {
+        height: 50px;
+        width: 100%;
+        font-size: larger;
+        background-color: rgb(188, 209, 247);
+        border: 2px solid gray;
+        border-radius: 10px;
+        &:hover{
+            box-shadow: 5px 5px 5px rgb(114, 114, 114);
+        }
+    }
+
+}
+
+
+
+.selected {
+    box-shadow: 10px 5px 5px red;
+}

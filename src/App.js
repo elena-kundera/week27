@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import tarifs from './components/tarifs.json';
+import Tarif from './components/tarif';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        tarifs.map((tarif) => 
+        <Tarif key={tarif.id} isSelected={tarif.isSelected} title={tarif.title} price={tarif.price} speed={tarif.speed}traffic={tarif.traffic}></Tarif>
+        )
+      }
     </div>
   );
 }
